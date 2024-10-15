@@ -1,0 +1,29 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+.hero {
+  /* Avoid using height: 100vh for the hero section */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .hero {
+    /* Adjust styles for smaller screens */
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Add more mobile-specific styles here */
+}
