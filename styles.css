@@ -1,17 +1,18 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: auto; /* Change from 100% to auto */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
-  min-height: 100%;
-  overflow-y: auto;
+  min-height: 100%; /* Ensure it can grow */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .hero {
-  /* Avoid using height: 100vh for the hero section */
-  min-height: 100vh;
+  /* Avoid using height: 100vh */
+  min-height: auto; /* Change from 100vh to auto */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,10 +21,6 @@ body, html {
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   .hero {
-    /* Adjust styles for smaller screens */
-    min-height: auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem; /* Adjust padding for mobile */
   }
-  
-  /* Add more mobile-specific styles here */
 }
